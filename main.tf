@@ -20,6 +20,6 @@ resource "aws_instance" "app_server" {
  ## user_data = "${file("init.sh")}"
  ## user_data_replace_on_change = true
   tags = {
-    Name = "teste aws"
+    Name = "Terraform ansible com python"
   }
 }
