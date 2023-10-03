@@ -17,3 +17,9 @@
 
     - name: iniciando o Projeto
       shell: '. /home/ubuntu/teste/venv/bin/activate; django-admin startproject setup /home/ubuntu/teste/'
+    - name: Alterando o hosts do settings
+      lineinfile:
+        path: /home/ubuntu/teste/setup/settings.py
+          regexp:'ALLOWED_HOSTS'
+          line:'ALLOWED_HOSTS =["*"]'
+        backrefs: yes
